@@ -1,0 +1,6 @@
+[submodule "DarkMint"]
+	path = DarkMint
+	url = https://github.com/originalseed/darkmint
+[submodule "DarkCold"]
+	path = DarkCold
+	url = https://github.com/originalseed/darkcold
