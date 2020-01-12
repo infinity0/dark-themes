@@ -11,7 +11,7 @@ all: $(DST:%=%/.stamp)
 clean:
 	rm -rf $(DST)
 
-%/.stamp: .git/modules/$$(SRC_$$*)/index
+%/.stamp: .git/modules/$$(SRC_$$*)/index %.sh
 	rm -rf "$*"
 	cp -a "$(SRC_$*)" "$*"
 	rm -f "$*"/.git "$*"/README*

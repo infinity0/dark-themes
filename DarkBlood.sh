@@ -3,7 +3,7 @@
 test "$(basename "$PWD")" == "DarkBlood" || exit 1
 
 find . -name '*.png' \
-  -execdir convert '{}' -channel rgb -separate +channel -swap 0,1 -combine '{}.out' \;
+  -execdir convert '{}' -channel rgba -separate -swap 0,1 -combine '{}.out' \;
 
 find . -name '*.png' \
   -execdir mv '{}.out' '{}' \;
