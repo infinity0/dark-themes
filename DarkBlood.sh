@@ -20,8 +20,8 @@ find . -type f '(' -name '*.css' -or -name '*.ini' -or -name '*rc' ')' \
 find . -type f '(' -name '*.css' -or -name '*.ini' -or -name '*rc' ')' \
   -execdir sed -i -E \
     -e 's/#B9787E/#B9B9B9/ig' \
-    -e 's/@define-color theme_fg_color @theme_text_color/@define-color theme_fg_color #B9787E/g' \
     '{}' \;
+#    -e 's/@define-color theme_fg_color @theme_text_color/@define-color theme_fg_color #B9787E/g' \
 
 find . -type f '(' -name '*.css' -or -name '*.xml' -or -name '*.theme' ')' \
   -execdir sed -i -E \
