@@ -2,10 +2,10 @@
 
 test "$(basename "$PWD")" == "DarkBlood" || exit 1
 
-find . -name '*.png' -type f \
+find . -type f '(' -name '*.png' -or -name '*.jpg' ')' \
   -execdir convert '{}' -channel rgba -separate -swap 0,1 -combine '{}.out' \;
 
-find . -name '*.png' \
+find . -type f '(' -name '*.png' -or -name '*.jpg' ')' \
   -execdir mv '{}.out' '{}' \;
 
 find . -type f '(' -name '*.css' -or -name '*.ini' -or -name '*rc' ')' \
