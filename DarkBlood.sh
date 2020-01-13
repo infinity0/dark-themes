@@ -23,6 +23,12 @@ find . -type f '(' -name '*.css' -or -name '*.ini' -or -name '*rc' ')' \
     '{}' \;
 #    -e 's/@define-color theme_fg_color @theme_text_color/@define-color theme_fg_color #B9787E/g' \
 
+# deprecation fixes
+sed -i -E \
+  -e '/-GtkEntry-inner-border/d' \
+  -e '/-GtkEntry-progress-border/d' \
+  gtk-3.20/*.css
+
 find . -type f '(' -name '*.css' -or -name '*.xml' -or -name '*.theme' ')' \
   -execdir sed -i -E \
     -e 's/DarkMint/DarkBlood/g' \
