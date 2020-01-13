@@ -17,3 +17,9 @@ The following themes are defined:
 - **DarkFire**: generated from DarkBlue by swapping R and B channels, then
   cloning the new B into the G channel. Without this latter step it looks more
   orange, but I wanted red instead.
+
+License
+-------
+
+The content here is licensed under the same License as the original themes,
+i.e. GPL-2+.
